@@ -4,7 +4,8 @@
   "description": "Node JS REST APIs Backend Service",
   "main": "server.js",
   "scripts": {
-    "test": "jest --coverage"
+    "test": "jest --coverage",
+    "start": "nodemon server.js"
   },
   "keywords": [
     "NodeJS",
