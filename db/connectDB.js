@@ -9,14 +9,14 @@ const connect = async () => {
 };
 
 const findUser = async (attributes) => {
-  return await User.find(attributes).exec();
+  return await User.findOne(attributes).exec();
 };
 
-const createUser = async (user) => {
+const saveUser = async (user) => {
   return await user.save();
 };
 
 const disconnect = async () => {
   await mongoose.connection.close();
 };
-module.exports = { connect, disconnect, findUser, createUser };
+module.exports = { connect, disconnect, findUser, saveUser };
