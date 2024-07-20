@@ -1,4 +1,4 @@
-const { connect, disconnect } = require('./connectDB');
+const { connect, disconnect, findUser, createUser } = require('./connectDB');
 const mongoose = require('mongoose');
 const User = require('../models/userModel');
 
