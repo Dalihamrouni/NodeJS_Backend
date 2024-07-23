@@ -1,25 +1,10 @@
 const express = require('express');
 const router = express.Router();
+const { registerHandler, loginHandler } = require('../services/userService');
 
 // http://localhost:8000/api/users/
-router.post('/register', (req, resp, next) => {
-  resp.status(200).json({
-    message: 'Successful - GET',
-    metadata: {
-      hostname: resp.hostname,
-      method: req.method,
-    },
-  });
-});
+router.post('/register', registerHandler);
 
-router.post('/login', (req, resp, next) => {
-  resp.status(200).json({
-    message: 'Successful - GET',
-    metadata: {
-      hostname: resp.hostname,
-      method: req.method,
-    },
-  });
-});
+router.post('/login', loginHandler);
 
 module.exports = router;
